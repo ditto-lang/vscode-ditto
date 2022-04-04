@@ -12,17 +12,6 @@ function startDittoLanguageServer(): LanguageClient {
     command: config.path,
     args: ["lsp"],
     transport: TransportKind.stdio,
-    debug: {
-      command: config.path,
-      args: ["lsp"],
-      transport: TransportKind.stdio,
-      options: {
-        env: {
-          // TODO make this configurable?
-          DITTO_LOG_DIR: ".ditto/logs",
-        },
-      },
-    },
   };
   const clientOptions: LanguageClientOptions = {
     documentSelector: [{ scheme: "file", language: "ditto" }],
