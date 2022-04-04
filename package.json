@@ -1,0 +1,74 @@
+{
+  "name": "vscode-ditto",
+  "author": "Jordan Mackie <jordan@nous.co> (https://github.com/jmackie)",
+  "displayName": "vscode-ditto",
+  "homepage": "https://github.com/ditto-lang/vscode-ditto",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ditto-lang/vscode-ditto.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ditto-lang/vscode-ditto/issues"
+  },
+  "keywords": [
+    "ditto",
+    "ditto-lang"
+  ],
+  "description": "VS Code extension for the ditto language",
+  "version": "0.0.1",
+  "license": "BSD-3-Clause",
+  "engines": {
+    "vscode": "^1.64.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Formatters",
+    "Linters",
+    "Other"
+  ],
+  "main": "./dist/extension.js",
+  "activationEvents": [
+    "onLanguage:ditto"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "ditto",
+        "extensions": [
+          ".ditto"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "configuration": {
+      "title": "Ditto",
+      "properties": {
+        "ditto.path": {
+          "type": "string",
+          "default": "ditto",
+          "description": "Path to the ditto executable."
+        }
+      }
+    }
+  },
+  "configurationDefaults": {
+    "ditto": {
+      "editor.semanticHighlighting.enabled": true
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "dependencies": {
+    "vscode-languageclient": "7.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "16.x",
+    "@types/vscode": "1.65.0",
+    "prettier": "2.6.1",
+    "typescript": "4.6.3",
+    "vsce": "2.7.0"
+  }
+}
