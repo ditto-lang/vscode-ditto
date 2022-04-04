@@ -1,4 +1,14 @@
+node_modules/**
+
 .vscode/**
 .vscode-test/**
-src/**
+
+.github/**
 .gitignore
+.prettierignore
+.nvmrc
+.nvimrc
+
+# Ignore node stuff
+src/**
+tsconfig.json
