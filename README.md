@@ -3,10 +3,10 @@
 Ditto language support for [Visual Studio Code](https://code.visualstudio.com/).
 
 > ⚠️ Very much a work-in-progress, don't expect much (yet).
- 
+
 ## Installing
 
-This extension isn't _currently_ available on the [marketplace](https://marketplace.visualstudio.com/). 
+This extension isn't _currently_ available on the [marketplace](https://marketplace.visualstudio.com/).
 
 In the meantime, you can install it like so...
 
